@@ -1,0 +1,44 @@
+﻿@model List<DapperSoccer.Dtos.TeamDto.ResultTeamDto>
+@{
+    ViewData["Title"] = "AllTeam";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+@section Styles {
+    <style>
+        .content-wrapper {
+            background-color: #eaf8e4 !important;
+        }
+    </style>
+}
+<div class="container mt-5">
+    <div class="card shadow-lg border-success">
+        <div class="card-header bg-success text-white d-flex align-items-center">
+            <h4 class="mb-0">
+                <i class="fas fa-shield-alt me-2"></i> Tüm Takımlar
+            </h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered align-middle text-center">
+                    <thead class="table-success">
+                        <tr>
+                            <th style="width: 10%">#</th>
+                            <th>Takım Adı</th>
+                            <th>Takım Kısa Adı</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            <tr>
+                                <td>@(i + 1)</td>
+                                <td class="fw-bold">@Model[i].team_long_name</td>
+                                <td><span class="badge bg-dark text-white">@Model[i].team_short_name</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

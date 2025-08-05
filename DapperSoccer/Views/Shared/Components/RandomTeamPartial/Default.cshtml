@@ -1,0 +1,21 @@
+﻿<div class="card" style="border: 1px solid #28a745;">
+    <div class="card-header border-0" style="background-color: #e9f7ef;">
+        <h3 class="card-title" style="color: #155724;">Günlük Göz Önündeki Kulüpler</h3>
+        <div class="card-tools"></div>
+    </div>
+
+    <div class="card-body">
+        @foreach (var item in Model)
+        {
+            <div class="d-flex justify-content-start align-items-center border-bottom mb-3" style="border-color: #c3e6cb;">
+                <p class="text-success text-xl mr-3" style="color: #28a745;">
+                    <i class="fas fa-futbol"></i>
+                </p>
+                <div class="d-flex flex-column">
+                    <span class="font-weight-bold" style="color: #155724;">@item.team_short_name</span>
+                    <span class="text-muted" style="color: #6c757d;">@item.team_long_name</span>
+                </div>
+            </div>
+        }
+    </div>
+</div>

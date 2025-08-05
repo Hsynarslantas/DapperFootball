@@ -1,0 +1,16 @@
+﻿@model List<DapperSoccer.Dtos.PlayerDto.WorstWeightPlayerDto>
+@foreach(var item in Model)
+{
+
+<div class="small-box bg-warning">
+    <div class="inner">
+        <h3>@item.weight</h3>
+        <p>@item.player_name</p>
+        <p>EN ZAYIF FUTBOLCU</p>
+    </div>
+    <div class="icon">
+    <i class="fas fa-weight"></i>
+    </div>
+</div>
+}
+ 

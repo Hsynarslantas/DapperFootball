@@ -1,0 +1,16 @@
+﻿ @model List<DapperSoccer.Dtos.PlayerDto.FirstBirthdayPlayerDto>  
+@foreach(var item in Model)
+{
+
+<div class="small-box bg-success">
+	<div class="inner">
+    <h3>@item.birthday</h3>
+	<p>@item.player_name</p>
+	<p>EN ERKEN DOĞAN FUTBOLCU</p>
+	</div>
+	<div class="icon">
+	<i class="ion ion-person-add"></i>
+	</div>
+	</div>
+
+}

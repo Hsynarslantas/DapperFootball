@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@section Styles {
+    <style>
+        .content-wrapper {
+            background-color: #eaf8e4 !important;
+            padding-left: 0px !important;
+        }
+    </style>
+}
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2 align-items-center">
+                <div class="col-sm-6">
+                    <h1 class="m-0"><i class="fas fa-futbol text-success"></i> Football Dashboard</h1>
+                </div>
+                <div class="col-sm-6 text-right">
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <!-- INFO CARDS -->
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    @await Component.InvokeAsync("HighHeightPlayerPartial")
+                </div>
+                <div class="col-lg-3 col-6">
+                    @await Component.InvokeAsync("FirstBirthdayPlayerPartial")
+                </div>
+                <div class="col-lg-3 col-6">
+                    @await Component.InvokeAsync("WorstWeightPlayerPartial")
+                </div>
+                <div class="col-lg-3 col-6">
+                    @await Component.InvokeAsync("LongestTeamPartial")
+                </div>
+            </div>
+
+            <!-- MESSI SKILLS CHART -->
+            <div class="container mt-5">
+                @await Component.InvokeAsync("BestPotentialPlayerPartial")
+            </div>
+
+            <!-- EXTRA COMPONENTS -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    @await Component.InvokeAsync("Top5PotentialPlayerPartial")
+                </div>
+                <div class="col-md-6">
+                    @await Component.InvokeAsync("RandomTeamPartial")
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/AdminLTE-3.0.4/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <script src="/AdminLTE-3.0.4/dist/js/adminlte.js"></script>
+    <script>
+        $(function () {
+            $(".knob").knob();
+        });
+    </script>
+}

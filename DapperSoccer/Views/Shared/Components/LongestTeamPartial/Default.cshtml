@@ -1,0 +1,15 @@
+﻿@model List<DapperSoccer.Dtos.TeamDto.LongestTeamDto>
+@foreach(var item in Model)
+{
+    <div class="small-box bg-danger">
+        <div class="inner">
+            <h3>@item.team_long_name</h3>
+            <p>@item.team_short_name</p>
+            <p>İSMİ EN UZUN TAKIM</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-tshirt"></i>
+        </div>
+    </div>
+}
+ 
